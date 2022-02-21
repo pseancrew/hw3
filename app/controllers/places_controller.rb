@@ -9,12 +9,12 @@ class PlacesController < ApplicationController
     end
     
     def new
-        @places = Place.new 
+        @place = Place.new 
     end
     
     def create
-        @places = Place.new(params["places"])
-        @places.save
+        @place = Place.new(params["place"])
+        @place.save
         redirect_to "/places"
     end
 end
