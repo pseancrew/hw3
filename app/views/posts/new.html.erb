@@ -1,20 +1,17 @@
 <h1>New Post</h1>
-<%= form_with model: @posts do |form| %>
+<%= form_with model: @post do |form| %>
   <p>
-    <%= form.label "Title" %>
+    <%= form.label "title" %>
     <%= form.text_field "title" %>
   </p>
   <p>
-    <%= form.label "city" %>
-    <%= form.text_field "city" %>
+    <%= form.label "posted_on" %>
+    <%= form.text_field "posted_on" %>
   </p>
   <p>
-    <%= form.label "state" %>
-    <%= form.text_field "state" %>
+    <%= form.label "description" %>
+    <%= form.text_field "description" %>
+    <%= form.hidden_field "place_id" %>
   </p>
   <%= form.submit %>
 <% end %>
-
-<p>
-  <a href="/posts/new?places_id=<% @places.id %>">New Post</a>
-</p>
